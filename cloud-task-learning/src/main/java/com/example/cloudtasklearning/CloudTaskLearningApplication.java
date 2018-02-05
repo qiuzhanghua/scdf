@@ -22,7 +22,7 @@ public class CloudTaskLearningApplication {
     return strings -> {
       System.out.println("Executed at :" +
           new SimpleDateFormat().format(new Date()));
-//      Files.lines(Paths.get("/qqq/mmm")).count();
+      Files.lines(Paths.get("/qqq/mmm")).count();
     };
   }
 
