@@ -35,3 +35,25 @@ SELECT * FROM TASK_EXECUTION
 - LAST_UPDATED
 - EXTERNAL_EXECUTION_ID
 - PARENT_EXECUTION_ID
+
+
+
+
+## cloud-stream-learning
+
+Generate String and send them to kafka
+
+1. Start kafka
+
+2. run 
+```bash
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic test
+```
+to listen to messages
+
+3. run this spring boot app
+
+### application.properties
+```properties
+spring.cloud.stream.bindings.output.destination=test
+```
